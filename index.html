@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contanier">
+        <div class="flex">
+            <nav class="nav">
+                <ul>
+                    <img class="logo" src="LOGO.png" alt="Logo">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <button onclick="toggleDarkMode()" id="toggleBtn">Dark Mode</button>
+                </ul>
+            </nav>
+            <div class="menu">
+                <div class="menu_text">
+                    <h2>Work that we produce for our clients</h2><br>
+                    <div class="lorem">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+                        Repellendus reprehenderit officiis, enim eius quisquam dolore inventore aut earum, tempora, <br>
+                        soluta id non officia doloremque vitae. Iure nihil sit voluptates dolorem?
+                    </div>
+                </div>
+                <img src="Rectangle 24.png" alt="Image">
+            </div>
+            <button class="ftr_btn">Get more details</button>
+        </div>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            const toggleBtn = document.getElementById("toggleBtn");
+
+            body.classList.toggle("dark-mode");
+
+            if (body.classList.contains("dark-mode")) {
+                toggleBtn.textContent = "Light Mode";
+            } else {
+                toggleBtn.textContent = "Dark Mode";
+            }
+        }
+    </script>
+</body>
+</html>
